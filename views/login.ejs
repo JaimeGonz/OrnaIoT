@@ -1,54 +1,48 @@
-<!--
-=========================================================
-* Soft UI Dashboard - v1.0.3
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://www.creative-tim.com/license)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
-    <!-- <main class="main-content  mt-0">
-        <section>
+<main class="main-content  mt-0">
+    <section>
         <div class="page-header min-vh-75">
             <div class="container">
             <div class="row">
                 <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
                 <div class="card card-plain mt-8">
+                    <div style="height: 5.875rem; text-align: center;">
+                        <a class="navbar-brand m-0" href="https://ornacol.com/" target="_blank">
+                        <img src="../assets/img/logos/main-logo-3.png" class="navbar-brand-img h-100" alt="main_logo">
+                        <span class="ms-1 font-weight-bold" style="color: #488154">IoT</span>
+                        </a>
+                    </div>
                     <div class="card-header pb-0 text-left bg-transparent">
-                    <h3 class="font-weight-bolder text-dark text-gradient">¡Bienvenido de vuelta!</h3>
-                    <p class="mb-0">Ingresa tu correo y contraseña para iniciar sesión.</p>
+                        <h3 class="font-weight-bolder text-dark text-gradient">¡Bienvenido de vuelta!</h3>
+                        <p class="mb-0">Ingresa tu correo y contraseña para iniciar sesión.</p>
                     </div>
                     <div class="card-body">
-                    <form role="form">
+
+                    <form action="/iniciarSesion" role="form" method="POST">
                         <label>Correo</label>
                         <div class="mb-3">
-                        <input type="email" class="form-control" placeholder="Correo" aria-label="Email" aria-describedby="email-addon">
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Correo" aria-label="Email" aria-describedby="email-addon">
                         </div>
                         <label>Contraseña</label>
                         <div class="mb-3">
-                        <input type="email" class="form-control" placeholder="Contraseña" aria-label="Password" aria-describedby="password-addon">
+                            <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña" aria-label="Password" aria-describedby="password-addon">
                         </div>
-                        <div class="form-check form-switch">
+                        <!-- <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" id="rememberMe" checked="">
                         <label class="form-check-label" for="rememberMe">Recuérdame</label>
-                        </div>
+                        </div> -->
                         <div class="text-center">
-                        <button type="button" class="btn bg-gradient-dark w-100 mt-4 mb-0">Iniciar Sesión</button>
+                        <button type="submit" id="login" class="btn bg-gradient-dark w-100 mt-4 mb-0">Iniciar Sesión</button>
                         </div>
                     </form>
+
                     </div>
-                    <div class="card-footer text-center pt-0 px-lg-2 px-1">
+                    <!-- <div class="card-footer text-center pt-0 px-lg-2 px-1">
                     <p class="mb-4 text-sm mx-auto">
                         ¿No tienes una cuenta?
-                        <a href="javascript:;" class="text-dark text-gradient font-weight-bold">Registrarse</a>
+                        <a href="/signup" class="text-dark text-gradient font-weight-bold">Registrarse</a>
                     </p>
-                    </div>
+                    </div> -->
                 </div>
                 </div>
                 <div class="col-md-6">
@@ -59,52 +53,6 @@
             </div>
             </div>
         </div>
-        </section>
-    </main> -->
-    <!-- -------- START FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
-    <!-- <footer class="footer py-5">
-        <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mb-4 mx-auto text-center">
-            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                Empresa
-            </a>
-            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                Acerca de
-            </a>
-            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                Productos
-            </a>
-            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                Blog
-            </a>
-            </div>
-            <div class="col-lg-8 mx-auto text-center mb-4 mt-2">
-            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
-                <span class="text-lg fab fa-dribbble"></span>
-            </a>
-            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
-                <span class="text-lg fab fa-twitter"></span>
-            </a>
-            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
-                <span class="text-lg fab fa-instagram"></span>
-            </a>
-            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
-                <span class="text-lg fab fa-pinterest"></span>
-            </a>
-            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
-                <span class="text-lg fab fa-github"></span>
-            </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-8 mx-auto text-center mt-1">
-            <p class="mb-0 text-secondary">
-                Copyright © <script>
-                document.write(new Date().getFullYear())
-                </script> Soft by ORNACOL.
-            </p>
-            </div>
-        </div>
-        </div>
-    </footer> -->
+    </section>
+</main>
+

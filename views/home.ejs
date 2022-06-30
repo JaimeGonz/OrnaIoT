@@ -1,140 +1,149 @@
 <div class="container-fluid py-4">
-    <!-- <br> -->
     <div class="wrapper">
-        
+        <!-- Título indicadores y red de sensores-->
         <div class="box1">
             <div class="mb-4 titles-space">
                 <h3>Indicadores</h3>
                 <h3 class="red_sensores_title">Red de Sensores</h2>
             </div>
         </div>
+        <!-- Indicadores -->
         <div class="box2">
+            <!-- pH -->
             <div class="box3">
                 <div class="card full-height">
                     <div class="card-body p-3">
                         <div class="row vertical-center">
-                            <div class="col-8">
-                                <div class="numbers">
+                            <div class="col-7 p-0">
+                                <div class="numbers center">
                                     <p class="text-sm mb-0 text-capitalize font-weight-bold">pH</p>
                                     <h5 class="font-weight-bolder mb-0">
-                                    $53,000
-                                    <span class="text-success text-sm font-weight-bolder">+55%</span>
+                                    <%= last_ph %>
+                                    <!-- <span class="text-success text-sm font-weight-bolder">+55%</span> -->
                                     </h5>
                                 </div>
                             </div>
-                            <div class="col-4 text-end">
-                                <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
+                            <div class="col-5 center p-0">
+                                <!-- <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
                                     <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+                                </div> -->
+                                <div class="icon indicadores">
+                                    <img src="../assets/img/ph2.png" class="img_indicadores" alt="pH">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- CE -->
             <div class="box4">
                 <div class="card full-height">
                     <div class="card-body p-3">
                         <div class="row vertical-center">
-                            <div class="col-8">
-                                <div class="numbers">
+                            <div class="col-7 p-0">
+                                <div class="numbers center">
                                     <p class="text-sm mb-0 text-capitalize font-weight-bold">CE</p>
                                     <h5 class="font-weight-bolder mb-0">
-                                    $53,000
-                                    <span class="text-success text-sm font-weight-bolder">+55%</span>
+                                    <%= last_ce %>
+                                    <!-- <span class="text-success text-sm font-weight-bolder">+55%</span> -->
                                     </h5>
                                 </div>
                             </div>
-                            <div class="col-4 text-end">
-                                <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                                    <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+                            <div class="col-5 center p-0">
+                                <div class="icon indicadores">
+                                    <img src="../assets/img/ce2.png" class="img_indicadores" alt="pH">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Temperatura -->
             <div class="box5">
                 <div class="card full-height">
                     <div class="card-body p-3">
                         <div class="row vertical-center">
-                            <div class="col-8">
+                            <div class="col-7 center p-0">
                                 <div class="numbers">
                                     <p class="text-sm mb-0 text-capitalize font-weight-bold">Temperatura</p>
                                     <h5 class="font-weight-bolder mb-0">
-                                    $53,000
-                                    <span class="text-success text-sm font-weight-bolder">+55%</span>
+                                    <%= last_temperatura %> °C
+                                    <!-- <span class="text-success text-sm font-weight-bolder">+55%</span> -->
                                     </h5>
                                 </div>
                             </div>
-                            <div class="col-4 text-end">
-                                <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                                    <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+                            <div class="col-5 center p-0">
+                                <div class="icon indicadores">
+                                    <img src="../assets/img/temperatura2.png" class="img_indicadores" alt="pH">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Humedad -->
             <div class="box6">
                 <div class="card full-height">
                     <div class="card-body p-3">
                         <div class="row vertical-center">
-                            <div class="col-8">
+                            <div class="col-7 center p-0">
                                 <div class="numbers">
                                     <p class="text-sm mb-0 text-capitalize font-weight-bold">Humedad</p>
                                     <h5 class="font-weight-bolder mb-0">
-                                    $53,000
-                                    <span class="text-success text-sm font-weight-bolder">+55%</span>
+                                    <%= last_humedad %>
+                                    <!-- <span class="text-success text-sm font-weight-bolder">+55%</span> -->
                                     </h5>
                                 </div>
                             </div>
-                            <div class="col-4 text-end">
-                                <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                                    <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+                            <div class="col-5 center p-0">
+                                <div class="icon indicadores">
+                                    <img src="../assets/img/humedad2.png" class="img_indicadores" alt="pH">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Luminosidad -->
             <div class="box7">
                 <div class="card full-height">
                     <div class="card-body p-3">
                         <div class="row vertical-center">
-                            <div class="col-8">
+                            <div class="col-7 center p-0">
                                 <div class="numbers">
                                     <p class="text-sm mb-0 text-capitalize font-weight-bold">Luminosidad</p>
                                     <h5 class="font-weight-bolder mb-0">
-                                    $53,000
-                                    <span class="text-success text-sm font-weight-bolder">+55%</span>
+                                    <%= last_luminosidad %>
+                                    <!-- <span class="text-success text-sm font-weight-bolder">+55%</span> -->
                                     </h5>
                                 </div>
                             </div>
-                            <div class="col-4 text-end">
-                                <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                                    <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+                            <div class="col-5 center p-0">
+                                <div class="icon indicadores">
+                                    <img src="../assets/img/luminosidad3.png" class="img_indicadores" alt="pH">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Presión -->
             <div class="box8">
                 <div class="card full-height">
                     <div class="card-body p-3">
                         <div class="row vertical-center">
-                            <div class="col-8">
+                            <div class="col-7 center p-0">
                                 <div class="numbers">
                                     <p class="text-sm mb-0 text-capitalize font-weight-bold">Presión</p>
                                     <h5 class="font-weight-bolder mb-0">
-                                    $53,000
-                                    <span class="text-success text-sm font-weight-bolder">+55%</span>
+                                    <%= last_presion %>
+                                    <!-- <span class="text-success text-sm font-weight-bolder">+55%</span> -->
                                     </h5>
                                 </div>
                             </div>
-                            <div class="col-4 text-end">
-                                <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                                    <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+                            <div class="col-5 center p-0">
+                                <div class="icon indicadores">
+                                    <img src="../assets/img/presion2.png" class="img_indicadores" alt="pH">
                                 </div>
                             </div>
                         </div>
@@ -145,14 +154,14 @@
                 <h3>Bastón Portable</h3>
             </div>
         </div>
+        <!-- Temperatura -->
         <div class="box10">
             <div class="card z-index-2 card-size">
-                <div class="card-header pb-0">
+                <div class="card-header calendar">
                     <h6>Temperatura</h6>
-                    <p class="text-sm">
-                        <i class="fa fa-arrow-up text-success"></i>
-                        <span class="font-weight-bold">4% menos</span> en 2021
-                    </p>
+                    <label>
+                        <input id="mobi-picker_temperatura" placeholder="Selecciona un rango" onchange="filtro_temperatura()" />
+                    </label>
                 </div>
                 <div class="card-body p-3">
                     <div class="chart">
@@ -161,14 +170,14 @@
                 </div>
             </div>
         </div>
+        <!-- Humedad -->
         <div class="box11">
             <div class="card z-index-2 card-size">
-                <div class="card-header pb-0">
+                <div class="card-header calendar">
                     <h6>Humedad</h6>
-                    <p class="text-sm">
-                        <i class="fa fa-arrow-up text-success"></i>
-                        <span class="font-weight-bold">4% menos</span> en 2021
-                    </p>
+                    <label>
+                        <input id="mobi-picker_humedad" placeholder="Selecciona un rango" onchange="filtro_humedad()" />
+                    </label>
                 </div>
                 <div class="card-body p-3">
                     <div class="chart">
@@ -177,19 +186,17 @@
                 </div>
             </div>
         </div>
+        <!-- Red de sensores title -->
         <div class="box18">
             <h3>Red de Sensores</h3>
         </div>
+        <!-- pH -->
         <div class="box12">
             <div class="card z-index-2 card-size">
                 <div class="card-header  calendar">
                     <h6>pH</h6>
-                    <p class="text-sm">
-                        <i class="fa fa-arrow-up text-success"></i>
-                        <span class="font-weight-bold">4% menos</span> en 2021
-                    </p>
                     <label>
-                        <input id="mobi-picker" placeholder="Selecciona un rango" onchange="getVal()" />
+                        <input name="ph" id="mobi-picker_ph" placeholder="Selecciona un rango" onchange="filtro_ph()" />
                     </label>
                 </div>
                 <div class="card-body p-3">
@@ -199,14 +206,14 @@
                 </div>
             </div>
         </div>
+        <!-- Conductividad Eléctrica -->
         <div class="box13">
             <div class="card z-index-2 card-size">
-                <div class="card-header pb-0">
-                    <h6>Conductividad Eléctrica</h6>
-                    <p class="text-sm">
-                        <i class="fa fa-arrow-up text-success"></i>
-                        <span class="font-weight-bold">4% menos</span> en 2021
-                    </p>
+                <div class="card-header calendar">
+                    <h6>CE</h6>
+                    <label>
+                        <input id="mobi-picker_ce" placeholder="Selecciona un rango" onchange="filtro_ce()" />
+                    </label>
                 </div>
                 <div class="card-body p-3">
                     <div class="chart">
@@ -215,14 +222,14 @@
                 </div>
             </div>
         </div>
+        <!-- Luminosidad -->
         <div class="box14">
             <div class="card z-index-2 card-size">
-                <div class="card-header pb-0">
+                <div class="card-header calendar">
                     <h6>Luminosidad</h6>
-                    <p class="text-sm">
-                        <i class="fa fa-arrow-up text-success"></i>
-                        <span class="font-weight-bold">4% menos</span> en 2021
-                    </p>
+                    <label>
+                        <input id="mobi-picker_luminosidad" placeholder="Selecciona un rango" onchange="filtro_luminosidad()" />
+                    </label>
                 </div>
                 <div class="card-body p-3">
                     <div class="chart">
@@ -231,14 +238,14 @@
                 </div>
             </div>
         </div>
+        <!-- Presión -->
         <div class="box15">
             <div class="card z-index-2 card-size">
-                <div class="card-header pb-0">
+                <div class="card-header calendar">
                     <h6>Presión</h6>
-                    <p class="text-sm">
-                        <i class="fa fa-arrow-up text-success"></i>
-                        <span class="font-weight-bold">4% menos</span> en 2021
-                    </p>
+                    <label>
+                        <input id="mobi-picker_presion" placeholder="Selecciona un rango" onchange="filtro_presion()" />
+                    </label>
                 </div>
                 <div class="card-body p-3">
                     <div class="chart">
@@ -247,6 +254,7 @@
                 </div>
             </div>
         </div>
+        <!-- Tabla bastón portable -->
         <div class="box16">
             <div class="card">
                 <div class="card-header pb-0">
@@ -317,6 +325,7 @@
                 </div>
             </div>
         </div>
+        <!-- Tabla red de sensores -->
         <div class="box17">
             <div class="card">
                 <div class="card-header pb-0">
@@ -401,7 +410,7 @@
                         document.write(new Date().getFullYear())
                         </script>,
                         creado por 
-                        <a href="https://ornacol.com/" class="font-weight-bold" target="_blank">ORNACOL</a>
+                        <a href="https://ornacol.com/" class="font-weight-bold" target="_blank" style="color: #488154">ORNACOL</a>
                         
                     </div>
                 </div>
@@ -417,7 +426,6 @@
         <script src="/assets/js/plugins/chartjs.min.js"></script>
         <script src="../assets/js/mobiscroll.javascript.min.js"></script>
 
-
         <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" 
         integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" 
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -427,28 +435,59 @@
         integrity="sha512-klQv6lz2YR+MecyFYMFRuU2eAl8IPRo6zHnsc9n142TJuJHS8CG0ix4Oq9na9ceeg1u5EkBfZsFcV3U7J51iew==" 
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+        <script src="https://momentjs.com/downloads/moment.min.js"></script>
+
         <script>
 
             mobiscroll.setOptions({
                 locale: mobiscroll.localeEs,
-                // theme: 'ios',
                 themeVariant: 'light'
             });
 
-            mobiscroll.datepicker('#mobi-picker', {
+            mobiscroll.datepicker('#mobi-picker_ph', {
                 controls: ['calendar'],
                 select:'range',
                 touchUi: true
             });
 
-            function getVal() {
-                const val = document.querySelector('#mobi-picker').value;
-                if(val){
-                    const rango_fechas = val.split("-")
-                    console.log(rango_fechas[0].trim());
-                    console.log(rango_fechas[1].trim());
-                }
-            }
+            mobiscroll.datepicker('#mobi-picker_ce', {
+                controls: ['calendar'],
+                select:'range',
+                touchUi: true
+            });
+
+            mobiscroll.datepicker('#mobi-picker_temperatura', {
+                controls: ['calendar'],
+                select:'range',
+                touchUi: true
+            });
+
+            mobiscroll.datepicker('#mobi-picker_humedad', {
+                controls: ['calendar'],
+                select:'range',
+                touchUi: true
+            });
+
+            mobiscroll.datepicker('#mobi-picker_luminosidad', {
+                controls: ['calendar'],
+                select:'range',
+                touchUi: true
+            });
+
+            mobiscroll.datepicker('#mobi-picker_presion', {
+                controls: ['calendar'],
+                select:'range',
+                touchUi: true
+            });
+
+            moment.locale('es');
+
+            let myChart;
+            let myChart2;
+            let myChart3;
+            let myChart4;
+            let myChart5;
+            let myChart6;
 
             let ph = []
             let fechas = []
@@ -461,6 +500,7 @@
             let fechas_red = []
 
             const filtro_datos_baston = '<%= filtro_datos_baston %>';
+
             const ph_values = '<%= ph %>';
             const fecha_values = '<%= fechas %>';
             const ce_values = '<%= ce %>';
@@ -480,41 +520,759 @@
             luminosidad = luminosidad_values.split(',');
             fechas_red = fechas_red_values.split(',');
 
+            // DATOS RED DE SENSORES
+            const datos_red = '<%- JSON.stringify(datos_red) %>';
+            const json_parse_red = JSON.parse(datos_red);
+
+            // DATO BASTON PORTABLE
+            const datos_baston= '<%- JSON.stringify(indicadores_baston) %>';
+            const json_parse_baston = JSON.parse(datos_baston);
+
             chartIt();
 
-            getVal();
+            function filtro_ph() {
+                const val = document.querySelector('#mobi-picker_ph').value;
+                let data_ph = []
+                let fechas_baston_ph = []
+                
+                if(val){
+
+                    const rango_fechas = val.split("-")
+                    const inicio = moment(rango_fechas[0].trim(), "DD/MM/YYYY");
+                    const fin = moment(rango_fechas[1].trim(), "DD/MM/YYYY");
+
+                    json_parse_baston.forEach( (element) => {
+
+                        const time = moment(moment(element.dataTime).format('DD/MM/YYYY'), "DD/MM/YYYY");
+
+                        if ( (time >= inicio) && (time <= fin) ) {
+                            data_ph.push(element.ph);
+                            fechas_baston_ph.push(moment(element.dataTime).format('L'));
+                        }
+
+                    });
+
+                    var ctx1 = document.getElementById("chart-pH").getContext("2d");
+
+                    if (myChart) {
+                        myChart.destroy();
+                    }
+
+                    var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
+
+                    myChart = new Chart(ctx1, {
+                        type: "line",
+                        data: {
+                            labels: fechas_baston_ph,
+                            datasets: [{
+                                label: 'pH',
+                                tension: 0.4,
+                                pointRadius: 0,
+                                borderColor: "#3A416F",
+                                borderWidth: 3,
+                                data: data_ph,
+                                maxBarThickness: 6
+                            }],
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                                zoom: {
+                                    zoom: {
+                                        wheel: {
+                                            enabled: true,
+                                        }
+                                    }
+                                }
+                            },
+                            interaction: {
+                                intersect: false,
+                                mode: 'index',
+                            },
+                            scales: {
+                                y: {
+                                    grid: {
+                                        drawBorder: false,
+                                        display: true,
+                                        drawOnChartArea: true,
+                                        drawTicks: false,
+                                        borderDash: [5, 5]
+                                    },
+                                    ticks: {
+                                        display: true,
+                                        padding: 10,
+                                        color: '#b2b9bf',
+                                        font: {
+                                            size: 11,
+                                            family: "Open Sans",
+                                            style: 'normal',
+                                            lineHeight: 2
+                                        },
+                                    }
+                                },
+                                x: {
+                                    grid: {
+                                        drawBorder: false,
+                                        display: false,
+                                        drawOnChartArea: false,
+                                        drawTicks: false,
+                                        borderDash: [5, 5]
+                                    },
+                                    ticks: {
+                                        display: true,
+                                        color: '#b2b9bf',
+                                        padding: 20,
+                                        font: {
+                                            size: 11,
+                                            family: "Open Sans",
+                                            style: 'normal',
+                                            lineHeight: 2
+                                        },
+                                    }
+                                },
+                            },
+                        },
+                    });
+                }
+                
+            }
+
+            function filtro_ce() {
+                const val = document.querySelector('#mobi-picker_ce').value;
+                let data_ce = []
+                let fechas_baston_ce = []
+                
+                if ( val ) {
+
+                    const rango_fechas = val.split("-")
+                    const inicio = moment(rango_fechas[0].trim(), "DD/MM/YYYY");
+                    const fin = moment(rango_fechas[1].trim(), "DD/MM/YYYY");
+
+                    json_parse_baston.forEach( (element) => {
+
+                        const time = moment(moment(element.dataTime).format('DD/MM/YYYY'), "DD/MM/YYYY");
+
+                        if ( (time >= inicio) && (time <= fin) ) {
+                            data_ce.push(element.ce);
+                            fechas_baston_ce.push(moment(element.dataTime).format('L'));
+                        }
+
+                    });
+
+                    var ctx2 = document.getElementById("chart-ce").getContext("2d");
+
+                    if (myChart2) {
+                        myChart2.destroy();
+                    }
+
+                    myChart2 = new Chart(ctx2, {
+                        type: "line",
+                        data: {
+                            labels: fechas_baston_ce,
+                            datasets: [{
+                                label: "Conductividad Eléctrica",
+                                tension: 0.4,
+                                borderWidth: 0,
+                                pointRadius: 0,
+                                borderColor: "#0ccb58",
+                                borderWidth: 3,
+                                data: data_ce,
+                                maxBarThickness: 6
+                            }],
+                        },
+                        options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false,
+                            },
+                            zoom: {
+                                zoom: {
+                                    wheel: {
+                                        enabled: true,
+                                    },
+                                    pinch: {
+                                        enabled: true
+                                    },
+                                    mode: 'xy',
+                                    overScaleMode: 'y',
+                                    limits: {
+                                        y: {min: 0, max: 15},
+                                        y2: {min: 0, max: 10}
+                                    },
+                                }
+                            }
+                        },
+                        interaction: {
+                            intersect: false,
+                            mode: 'index',
+                        },
+                        scales: {
+                            y: {
+                                grid: {
+                                    drawBorder: false,
+                                    display: true,
+                                    drawOnChartArea: true,
+                                    drawTicks: false,
+                                    borderDash: [5, 5]
+                                },
+                                ticks: {
+                                    display: true,
+                                    padding: 10,
+                                    color: '#b2b9bf',
+                                    font: {
+                                        size: 11,
+                                        family: "Open Sans",
+                                        style: 'normal',
+                                        lineHeight: 2
+                                    },
+                                }
+                            },
+                            x: {
+                                grid: {
+                                    drawBorder: false,
+                                    display: false,
+                                    drawOnChartArea: false,
+                                    drawTicks: false,
+                                    borderDash: [5, 5]
+                                },
+                                ticks: {
+                                    display: true,
+                                    color: '#b2b9bf',
+                                    padding: 20,
+                                    font: {
+                                        size: 11,
+                                        family: "Open Sans",
+                                        style: 'normal',
+                                        lineHeight: 2
+                                    },
+                                }
+                            },
+                        },
+                    },
+                    });
+                }
+                
+            }
+
+            function filtro_temperatura() {
+
+                const val = document.querySelector('#mobi-picker_temperatura').value;
+                let data_temperatura = []
+                let fechas_red_temperatura = []
+                
+                if ( val ) {
+
+                    const rango_fechas = val.split("-")
+                    const inicio = moment(rango_fechas[0].trim(), "DD/MM/YYYY");
+                    const fin = moment(rango_fechas[1].trim(), "DD/MM/YYYY");
+
+                    json_parse_red.forEach( (element) => {
+
+                        const time = moment(moment(element.Fecha_Hora).format('DD/MM/YYYY'), "DD/MM/YYYY");
+
+                        if ( (time >= inicio) && (time <= fin) ) {
+
+                            console.log("Se encuentra dentro del rango");
+
+                            data_temperatura.push(element.Temperatura);
+                            fechas_red_temperatura.push(moment(element.Fecha_Hora).format('L'));
+                        }
+
+                    });
+
+                    var ctx3 = document.getElementById("chart-temperatura").getContext("2d");
+
+                    if (myChart3) {
+                        myChart3.destroy();
+                    }
+
+                    myChart3 = new Chart(ctx3, {
+                        type: "line",
+                        data: {
+                            labels: fechas_red_temperatura,
+                            datasets: [{
+                                label: "Temperatura",
+                                tension: 0.4,
+                                borderWidth: 0,
+                                pointRadius: 0,
+                                borderColor: "#3A416F",
+                                borderWidth: 3,
+                                data: data_temperatura,
+                                maxBarThickness: 6
+                            }],
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                                zoom: {
+                                    zoom: {
+                                        wheel: {
+                                            enabled: true,
+                                        },
+                                        pinch: {
+                                            enabled: true
+                                        },
+                                        mode: 'xy',
+                                        overScaleMode: 'y',
+                                        limits: {
+                                            y: {min: 0, max: 15},
+                                            y2: {min: 0, max: 10}
+                                        },
+                                    }
+                                }
+                            },
+                            interaction: {
+                                intersect: false,
+                                mode: 'index',
+                            },
+                            scales: {
+                                y: {
+                                    grid: {
+                                        drawBorder: false,
+                                        display: true,
+                                        drawOnChartArea: true,
+                                        drawTicks: false,
+                                        borderDash: [5, 5]
+                                    },
+                                    ticks: {
+                                        display: true,
+                                        padding: 10,
+                                        color: '#b2b9bf',
+                                        font: {
+                                            size: 11,
+                                            family: "Open Sans",
+                                            style: 'normal',
+                                            lineHeight: 2
+                                        },
+                                    }
+                                },
+                                x: {
+                                    grid: {
+                                        drawBorder: false,
+                                        display: false,
+                                        drawOnChartArea: false,
+                                        drawTicks: false,
+                                        borderDash: [5, 5]
+                                    },
+                                    ticks: {
+                                        display: true,
+                                        color: '#b2b9bf',
+                                        padding: 20,
+                                        font: {
+                                            size: 11,
+                                            family: "Open Sans",
+                                            style: 'normal',
+                                            lineHeight: 2
+                                        },
+                                    }
+                                },
+                            },
+                        },
+                    });
+                }
+                
+            }
+
+            function filtro_humedad() {
+
+                const val = document.querySelector('#mobi-picker_humedad').value;
+                let data_humedad = []
+                let fechas_red_humedad = []
+                
+                if ( val ) {
+
+                    const rango_fechas = val.split("-")
+                    const inicio = moment(rango_fechas[0].trim(), "DD/MM/YYYY");
+                    const fin = moment(rango_fechas[1].trim(), "DD/MM/YYYY");
+
+                    json_parse_red.forEach( (element) => {
+
+                        const time = moment(moment(element.Fecha_Hora).format('DD/MM/YYYY'), "DD/MM/YYYY");
+
+                        if ( (time >= inicio) && (time <= fin) ) {
+
+                            console.log("Se encuentra dentro del rango");
+
+                            data_humedad.push(element.Temperatura);
+                            fechas_red_humedad.push(moment(element.Fecha_Hora).format('L'));
+                        }
+
+                    });
+
+                    var ctx4 = document.getElementById("chart-humedad").getContext("2d");
+
+                    if (myChart4) {
+                        myChart4.destroy();
+                    }
+
+                    myChart4 = new Chart(ctx4, {
+                        type: "line",
+                        data: {
+                            labels: fechas_red_humedad,
+                            datasets: [{
+                                label: "Humedad",
+                                tension: 0.4,
+                                borderWidth: 0,
+                                pointRadius: 0,
+                                borderColor: "#0ccb58",
+                                borderWidth: 3,
+                                data: data_humedad,
+                                maxBarThickness: 6
+                            }],
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                                zoom: {
+                                    zoom: {
+                                        wheel: {
+                                            enabled: true,
+                                        },
+                                        pinch: {
+                                            enabled: true
+                                        },
+                                        mode: 'xy',
+                                        overScaleMode: 'y',
+                                        limits: {
+                                            y: {min: 0, max: 15},
+                                            y2: {min: 0, max: 10}
+                                        },
+                                    }
+                                }
+                            },
+                            interaction: {
+                                intersect: false,
+                                mode: 'index',
+                            },
+                            scales: {
+                                y: {
+                                    grid: {
+                                        drawBorder: false,
+                                        display: true,
+                                        drawOnChartArea: true,
+                                        drawTicks: false,
+                                        borderDash: [5, 5]
+                                    },
+                                    ticks: {
+                                        display: true,
+                                        padding: 10,
+                                        color: '#b2b9bf',
+                                        font: {
+                                            size: 11,
+                                            family: "Open Sans",
+                                            style: 'normal',
+                                            lineHeight: 2
+                                        },
+                                    }
+                                },
+                                x: {
+                                    grid: {
+                                        drawBorder: false,
+                                        display: false,
+                                        drawOnChartArea: false,
+                                        drawTicks: false,
+                                        borderDash: [5, 5]
+                                    },
+                                    ticks: {
+                                        display: true,
+                                        color: '#b2b9bf',
+                                        padding: 20,
+                                        font: {
+                                            size: 11,
+                                            family: "Open Sans",
+                                            style: 'normal',
+                                            lineHeight: 2
+                                        },
+                                    }
+                                },
+                            },
+                        },
+                    });
+                }
+                
+            }
+
+            function filtro_luminosidad() {
+
+                const val = document.querySelector('#mobi-picker_luminosidad').value;
+                let data_luminosidad = []
+                let fechas_red_luminosidad = []
+                
+                if ( val ) {
+
+                    const rango_fechas = val.split("-")
+                    const inicio = moment(rango_fechas[0].trim(), "DD/MM/YYYY");
+                    const fin = moment(rango_fechas[1].trim(), "DD/MM/YYYY");
+
+                    json_parse_red.forEach( (element) => {
+
+                        const time = moment(moment(element.Fecha_Hora).format('DD/MM/YYYY'), "DD/MM/YYYY");
+
+                        if ( (time >= inicio) && (time <= fin) ) {
+                            data_luminosidad.push(element.Luminosidad);
+                            fechas_red_luminosidad.push(moment(element.Fecha_Hora).format('L'));
+                        }
+
+                    });
+
+                    var ctx5 = document.getElementById("chart-luminosidad").getContext("2d");
+
+                    if (myChart5) {
+                        myChart5.destroy();
+                    }
+
+                    myChart5 = new Chart(ctx5, {
+                        type: "line",
+                        data: {
+                            labels: fechas_red_luminosidad,
+                            datasets: [{
+                                label: "Luminosidad",
+                                tension: 0.4,
+                                borderWidth: 0,
+                                pointRadius: 0,
+                                borderColor: "#3A416F",
+                                borderWidth: 3,
+                                data: data_luminosidad,
+                                maxBarThickness: 6
+                            }],
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                                zoom: {
+                                    zoom: {
+                                        wheel: {
+                                            enabled: true,
+                                        },
+                                        pinch: {
+                                            enabled: true
+                                        },
+                                        mode: 'xy',
+                                        overScaleMode: 'y',
+                                        limits: {
+                                            y: {min: 0, max: 15},
+                                            y2: {min: 0, max: 10}
+                                        },
+                                    }
+                                }
+                            },
+                            interaction: {
+                                intersect: false,
+                                mode: 'index',
+                            },
+                            scales: {
+                                y: {
+                                    grid: {
+                                        drawBorder: false,
+                                        display: true,
+                                        drawOnChartArea: true,
+                                        drawTicks: false,
+                                        borderDash: [5, 5]
+                                    },
+                                    ticks: {
+                                        display: true,
+                                        padding: 10,
+                                        color: '#b2b9bf',
+                                        font: {
+                                            size: 11,
+                                            family: "Open Sans",
+                                            style: 'normal',
+                                            lineHeight: 2
+                                        },
+                                    }
+                                },
+                                x: {
+                                    grid: {
+                                        drawBorder: false,
+                                        display: false,
+                                        drawOnChartArea: false,
+                                        drawTicks: false,
+                                        borderDash: [5, 5]
+                                    },
+                                    ticks: {
+                                        display: true,
+                                        color: '#b2b9bf',
+                                        padding: 20,
+                                        font: {
+                                            size: 11,
+                                            family: "Open Sans",
+                                            style: 'normal',
+                                            lineHeight: 2
+                                        },
+                                    }
+                                },
+                            },
+                        },
+                    });
+                }
+                
+            }
+
+            function filtro_presion() {
+
+                const val = document.querySelector('#mobi-picker_presion').value;
+                let data_presion = []
+                let fechas_red_presion = []
+                
+                if ( val ) {
+
+                    const rango_fechas = val.split("-")
+                    const inicio = moment(rango_fechas[0].trim(), "DD/MM/YYYY");
+                    const fin = moment(rango_fechas[1].trim(), "DD/MM/YYYY");
+
+                    json_parse_red.forEach( (element) => {
+
+                        const time = moment(moment(element.Fecha_Hora).format('DD/MM/YYYY'), "DD/MM/YYYY");
+
+                        if ( (time >= inicio) && (time <= fin) ) {
+                            data_presion.push(element.Presión);
+                            fechas_red_presion.push(moment(element.Fecha_Hora).format('L'));
+                        }
+
+                    });
+
+                    var ctx6 = document.getElementById("chart-presion").getContext("2d");
+
+                    if (myChart6) {
+                        myChart6.destroy();
+                    }
+
+                    myChart6 = new Chart(ctx6, {
+                        type: "line",
+                        data: {
+                            labels: fechas_red_presion,
+                            datasets: [{
+                                label: "Presión",
+                                tension: 0.4,
+                                borderWidth: 0,
+                                pointRadius: 0,
+                                borderColor: "#0ccb58",
+                                borderWidth: 3,
+                                data: data_presion,
+                                maxBarThickness: 6
+                            }],
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                                zoom: {
+                                    zoom: {
+                                        wheel: {
+                                            enabled: true,
+                                        },
+                                        pinch: {
+                                            enabled: true
+                                        },
+                                        mode: 'xy',
+                                        overScaleMode: 'y',
+                                        limits: {
+                                            y: {min: 0, max: 15},
+                                            y2: {min: 0, max: 10}
+                                        },
+                                    }
+                                }
+                            },
+                            interaction: {
+                                intersect: false,
+                                mode: 'index',
+                            },
+                            scales: {
+                                y: {
+                                    grid: {
+                                        drawBorder: false,
+                                        display: true,
+                                        drawOnChartArea: true,
+                                        drawTicks: false,
+                                        borderDash: [5, 5]
+                                    },
+                                    ticks: {
+                                        display: true,
+                                        padding: 10,
+                                        color: '#b2b9bf',
+                                        font: {
+                                            size: 11,
+                                            family: "Open Sans",
+                                            style: 'normal',
+                                            lineHeight: 2
+                                        },
+                                    }
+                                },
+                                x: {
+                                    grid: {
+                                        drawBorder: false,
+                                        display: false,
+                                        drawOnChartArea: false,
+                                        drawTicks: false,
+                                        borderDash: [5, 5]
+                                    },
+                                    ticks: {
+                                        display: true,
+                                        color: '#b2b9bf',
+                                        padding: 20,
+                                        font: {
+                                            size: 11,
+                                            family: "Open Sans",
+                                            style: 'normal',
+                                            lineHeight: 2
+                                        },
+                                    }
+                                },
+                            },
+                        },
+                    });
+                }
+                
+            }
+
+            filtro_ph();
+            filtro_ce();
+            filtro_temperatura();
+            filtro_humedad();
+            filtro_luminosidad();
+            filtro_presion();
 
             async function chartIt(){
 
                 await '<%= filtro_datos_baston %>';
 
                 var ctx1 = document.getElementById("chart-pH").getContext("2d");
-                var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
 
-                gradientStroke1.addColorStop(1, 'rgba(203,12,159,0.2)');
-                gradientStroke1.addColorStop(0.2, 'rgba(72,72,176,0.0)');
-                gradientStroke1.addColorStop(0, 'rgba(203,12,159,0)'); //purple colors
+                if (myChart) {
+                    myChart.destroy();
+                }
 
-                var gradientStroke2 = ctx1.createLinearGradient(0, 230, 0, 50);
-
-                gradientStroke2.addColorStop(1, 'rgba(20,23,39,0.2)');
-                gradientStroke2.addColorStop(0.2, 'rgba(72,72,176,0.0)');
-                gradientStroke2.addColorStop(0, 'rgba(20,23,39,0)'); //purple colors
-
-
-                new Chart(ctx1, {
+                myChart = new Chart(ctx1, {
                     type: "line",
                     data: {
                         labels: fechas,
                         datasets: [{
                             label: 'pH',
                             tension: 0.4,
-                            borderWidth: 0,
                             pointRadius: 0,
-                            borderColor: "#cb0c9f",
+                            borderColor: "#3A416F",
                             borderWidth: 3,
-                            backgroundColor: gradientStroke1,
-                            fill: true,
                             data: ph,
                             maxBarThickness: 6
                         }],
@@ -584,19 +1342,12 @@
                 });
 
                 var ctx2 = document.getElementById("chart-ce").getContext("2d");
-                var gradientStroke3 = ctx2.createLinearGradient(0, 230, 0, 50);
 
-                gradientStroke3.addColorStop(1, 'rgba(203,12,159,0.2)');
-                gradientStroke3.addColorStop(0.2, 'rgba(72,72,176,0.0)');
-                gradientStroke3.addColorStop(0, 'rgba(203,12,159,0)'); //purple colors
+                if (myChart2) {
+                    myChart.destroy();
+                }
 
-                var gradientStroke4 = ctx2.createLinearGradient(0, 230, 0, 50);
-
-                gradientStroke4.addColorStop(1, 'rgba(20,23,39,0.2)');
-                gradientStroke4.addColorStop(0.2, 'rgba(72,72,176,0.0)');
-                gradientStroke4.addColorStop(0, 'rgba(20,23,39,0)'); //purple colors
-
-                new Chart(ctx2, {
+                myChart2 = new Chart(ctx2, {
                     type: "line",
                     data: {
                         labels: fechas,
@@ -605,10 +1356,8 @@
                             tension: 0.4,
                             borderWidth: 0,
                             pointRadius: 0,
-                            borderColor: "#3A416F",
+                            borderColor: "#0ccb58",
                             borderWidth: 3,
-                            backgroundColor: gradientStroke4,
-                            fill: true,
                             data: ce,
                             maxBarThickness: 6
                         }],
@@ -688,19 +1437,12 @@
             }
 
                 var ctx3 = document.getElementById("chart-temperatura").getContext("2d");
-                var gradientStroke5 = ctx3.createLinearGradient(0, 230, 0, 50);
 
-                gradientStroke5.addColorStop(1, 'rgba(203,12,159,0.2)');
-                gradientStroke5.addColorStop(0.2, 'rgba(72,72,176,0.0)');
-                gradientStroke5.addColorStop(0, 'rgba(203,12,159,0)'); //purple colors
+                if (myChart3) {
+                    myChart3.destroy();
+                }
 
-                var gradientStroke6 = ctx3.createLinearGradient(0, 230, 0, 50);
-
-                gradientStroke6.addColorStop(1, 'rgba(20,23,39,0.2)');
-                gradientStroke6.addColorStop(0.2, 'rgba(72,72,176,0.0)');
-                gradientStroke6.addColorStop(0, 'rgba(20,23,39,0)'); //purple colors
-
-                new Chart(ctx3, {
+                myChart3 = new Chart(ctx3, {
                     type: "line",
                     data: {
                         labels: fechas_red,
@@ -709,10 +1451,8 @@
                             tension: 0.4,
                             borderWidth: 0,
                             pointRadius: 0,
-                            borderColor: "#cb0c9f",
+                            borderColor: "#3A416F",
                             borderWidth: 3,
-                            backgroundColor: gradientStroke5,
-                            fill: true,
                             data: temperatura,
                             maxBarThickness: 6
                         }],
@@ -782,19 +1522,12 @@
                 });
 
                 var ctx4 = document.getElementById("chart-humedad").getContext("2d");
-                var gradientStroke7 = ctx4.createLinearGradient(0, 230, 0, 50);
 
-                gradientStroke7.addColorStop(1, 'rgba(203,12,159,0.2)');
-                gradientStroke7.addColorStop(0.2, 'rgba(72,72,176,0.0)');
-                gradientStroke7.addColorStop(0, 'rgba(203,12,159,0)'); //purple colors
+                if (myChart4) {
+                    myChart4.destroy();
+                }
 
-                var gradientStroke8 = ctx4.createLinearGradient(0, 230, 0, 50);
-
-                gradientStroke8.addColorStop(1, 'rgba(20,23,39,0.2)');
-                gradientStroke8.addColorStop(0.2, 'rgba(72,72,176,0.0)');
-                gradientStroke8.addColorStop(0, 'rgba(20,23,39,0)'); //purple colors
-
-                new Chart(ctx4, {
+                myChart4 = new Chart(ctx4, {
                     type: "line",
                     data: {
                         labels: fechas_red,
@@ -803,10 +1536,8 @@
                             tension: 0.4,
                             borderWidth: 0,
                             pointRadius: 0,
-                            borderColor: "#cb0c9f",
+                            borderColor: "#0ccb58",
                             borderWidth: 3,
-                            backgroundColor: gradientStroke8,
-                            fill: true,
                             data: humedad,
                             maxBarThickness: 6
                         }],
@@ -876,17 +1607,10 @@
                 });
 
                 var ctx5 = document.getElementById("chart-luminosidad").getContext("2d");
-                var gradientStroke9 = ctx5.createLinearGradient(0, 230, 0, 50);
-
-                gradientStroke9.addColorStop(1, 'rgba(203,12,159,0.2)');
-                gradientStroke9.addColorStop(0.2, 'rgba(72,72,176,0.0)');
-                gradientStroke9.addColorStop(0, 'rgba(203,12,159,0)'); //purple colors
-
-                var gradientStroke10 = ctx5.createLinearGradient(0, 230, 0, 50);
-
-                gradientStroke10.addColorStop(1, 'rgba(20,23,39,0.2)');
-                gradientStroke10.addColorStop(0.2, 'rgba(72,72,176,0.0)');
-                gradientStroke10.addColorStop(0, 'rgba(20,23,39,0)'); //purple colors
+                
+                if (myChart5) {
+                    myChart5.destroy();
+                }
 
                 new Chart(ctx5, {
                     type: "line",
@@ -897,10 +1621,8 @@
                             tension: 0.4,
                             borderWidth: 0,
                             pointRadius: 0,
-                            borderColor: "#cb0c9f",
+                            borderColor: "#3A416F",
                             borderWidth: 3,
-                            backgroundColor: gradientStroke9,
-                            fill: true,
                             data: luminosidad,
                             maxBarThickness: 6
                         }],
@@ -970,19 +1692,12 @@
                 });
 
                 var ctx6 = document.getElementById("chart-presion").getContext("2d");
-                var gradientStroke11 = ctx6.createLinearGradient(0, 230, 0, 50);
 
-                gradientStroke11.addColorStop(1, 'rgba(203,12,159,0.2)');
-                gradientStroke11.addColorStop(0.2, 'rgba(72,72,176,0.0)');
-                gradientStroke11.addColorStop(0, 'rgba(203,12,159,0)'); //purple colors
+                if (myChart6) {
+                    myChart6.destroy();
+                }
 
-                var gradientStroke12 = ctx6.createLinearGradient(0, 230, 0, 50);
-
-                gradientStroke12.addColorStop(1, 'rgba(20,23,39,0.2)');
-                gradientStroke12.addColorStop(0.2, 'rgba(72,72,176,0.0)');
-                gradientStroke12.addColorStop(0, 'rgba(20,23,39,0)'); //purple colors
-
-                new Chart(ctx6, {
+                myChart6 = new Chart(ctx6, {
                     type: "line",
                     data: {
                         labels: fechas_red,
@@ -991,10 +1706,8 @@
                             tension: 0.4,
                             borderWidth: 0,
                             pointRadius: 0,
-                            borderColor: "#cb0c9f",
+                            borderColor: "#0ccb58",
                             borderWidth: 3,
-                            backgroundColor: gradientStroke12,
-                            fill: true,
                             data: presion,
                             maxBarThickness: 6
                         }],

@@ -2,7 +2,6 @@ const express = require('express')
 const expressLayouts = require('express-ejs-layouts')
 const path = require('path')
 const app = express()
-// import { db } from '../config/firebase.js'
 
 app.set('view engine', 'ejs');
 app.use(expressLayouts)

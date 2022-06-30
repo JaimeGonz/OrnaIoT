@@ -14,9 +14,14 @@
     justify-content: center;
 }
 
+.p-0 {
+    /* width: 48px; */
+    padding: 0;
+}
+
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1100px) {
 
     .wrapper {
         display: grid;
@@ -87,7 +92,7 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1100px) {
 
     .wrapper {
         display: grid;
@@ -208,5 +213,14 @@
     justify-content: space-evenly;
 }
 
+.indicadores {
+    height: 48px;
+    width: 48px;
+    border: 1px;
+}
 
+.img_indicadores {
+    height: 48px;
+    width: 48px;
+}
 
