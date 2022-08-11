@@ -173,6 +173,14 @@
         display: none;
     }
 
+    .productores {
+        padding: 2rem;
+    }
+
+    .add_user {
+        text-align: right;
+    }
+
 
 }
 

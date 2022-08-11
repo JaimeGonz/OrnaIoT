@@ -16,33 +16,23 @@
                         <h3 class="font-weight-bolder text-dark text-gradient">¡Bienvenido de vuelta!</h3>
                         <p class="mb-0">Ingresa tu correo y contraseña para iniciar sesión.</p>
                     </div>
+
                     <div class="card-body">
-
-                    <form action="/iniciarSesion" role="form" method="POST">
-                        <label>Correo</label>
-                        <div class="mb-3">
-                            <input type="email" id="email" name="email" class="form-control" placeholder="Correo" aria-label="Email" aria-describedby="email-addon">
-                        </div>
-                        <label>Contraseña</label>
-                        <div class="mb-3">
-                            <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña" aria-label="Password" aria-describedby="password-addon">
-                        </div>
-                        <!-- <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="rememberMe" checked="">
-                        <label class="form-check-label" for="rememberMe">Recuérdame</label>
-                        </div> -->
-                        <div class="text-center">
-                        <button type="submit" id="login" class="btn bg-gradient-dark w-100 mt-4 mb-0">Iniciar Sesión</button>
-                        </div>
-                    </form>
-
+                        <form id="login">
+                            <label>Correo</label>
+                            <div class="mb-3">
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Correo">
+                            </div>
+                            <label>Contraseña</label>
+                            <div class="mb-3">
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña">
+                            </div>
+                            <div class="text-center">
+                                <button class="btn bg-gradient-dark w-100 mt-4 mb-0">Iniciar Sesión</button>
+                            </div>
+                        </form>
                     </div>
-                    <!-- <div class="card-footer text-center pt-0 px-lg-2 px-1">
-                    <p class="mb-4 text-sm mx-auto">
-                        ¿No tienes una cuenta?
-                        <a href="/signup" class="text-dark text-gradient font-weight-bold">Registrarse</a>
-                    </p>
-                    </div> -->
+
                 </div>
                 </div>
                 <div class="col-md-6">
@@ -55,4 +45,60 @@
         </div>
     </section>
 </main>
+
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js" defer></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js" defer></script>
+<script>
+
+    window.addEventListener("DOMContentLoaded", () => {
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAcQie2FivaQiwqsHbuD5GOehcX4INPXVs",
+            authDomain: "iot-ornacol.firebaseapp.com",
+            databaseURL: "https://iot-ornacol-default-rtdb.firebaseio.com",
+            projectId: "iot-ornacol",
+            storageBucket: "iot-ornacol.appspot.com",
+            messagingSenderId: "721299366895",
+            appId: "1:721299366895:web:f21cdf459cc5ea8e1e4c1a",
+            measurementId: "G-5YFEGWDTZ9"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE);
+
+        document
+            .getElementById("login")
+            .addEventListener("submit", (event) => {
+                event.preventDefault();
+                const email = event.target.email.value;
+                const password = event.target.password.value;
+
+                firebase
+                    .auth()
+                    .signInWithEmailAndPassword(email, password)
+                    .then(({ user }) => {
+                        return user.getIdToken().then((idToken) => {
+                            return fetch("/sessionLogin", {
+                                method: "POST",
+                                headers: {
+                                    Accept: "application/json",
+                                    "Content-Type": "application/json",
+                                    "CSRF-Token": Cookies.get("XSRF-TOKEN"),
+                                },
+                                body: JSON.stringify({ idToken }),
+                            });
+                        });
+                    })
+                    .then( () => {
+                        return firebase.auth().signOut();
+                    })
+                    .then (() => {
+                        console.log("Redirect ")
+                        window.location.assign("/");
+                    });
+                return false;
+            });
+    });
+</script>
 

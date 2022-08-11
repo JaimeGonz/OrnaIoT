@@ -65,7 +65,7 @@
             </div> -->
             <div class="card-body">
 
-                <form action="/registrarUsuario" method="POST" role="form text-left">
+                <form id="signup">
                     <div class="mb-3">
                         <input type="text" id="user" name="user" class="form-control" placeholder="Usuario" aria-label="User" aria-describedby="email-addon">
                     </div>
@@ -82,7 +82,7 @@
                     </label>
                     </div> -->
                     <div class="text-center">
-                        <button type="submit" id="signUp" class="btn bg-gradient-dark w-100 my-4 mb-2">Registrar</button>
+                        <button class="btn bg-gradient-dark w-100 my-4 mb-2">Registrar</button>
                     </div>
                     <!-- <p class="text-sm mt-3 mb-0">¿Ya tienes una cuenta? <a href="/login" class="text-dark font-weight-bolder">Iniciar Sesión</a></p> -->
                 </form>
@@ -93,3 +93,57 @@
     </div>
     </div>
 </section>
+
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js" defer></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js" defer></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-admin-.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js" defer></script>
+
+<script>
+
+    window.addEventListener("DOMContentLoaded", () => {
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAcQie2FivaQiwqsHbuD5GOehcX4INPXVs",
+            authDomain: "iot-ornacol.firebaseapp.com",
+            databaseURL: "https://iot-ornacol-default-rtdb.firebaseio.com",
+            projectId: "iot-ornacol",
+            storageBucket: "iot-ornacol.appspot.com",
+            messagingSenderId: "721299366895",
+            appId: "1:721299366895:web:f21cdf459cc5ea8e1e4c1a",
+            measurementId: "G-5YFEGWDTZ9"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE);
+
+        document
+            .getElementById("signup")
+            .addEventListener("submit", (event) => {
+                event.preventDefault();
+                const email = event.target.email.value;
+                const password = event.target.password.value;
+
+                console.log(email);
+                console.log(password);
+                console.log("Signup");
+
+                firebase
+                    .auth()
+                    .createUserWithEmailAndPassword(email, password)
+                    .then((userCredential) => {
+
+                        const user = userCredential.user;
+                        console.log('Successfully created new user:', user.uid);
+                        window.location.assign("/tables");
+                    })
+                    .catch((error) => {
+                        const errorCode = error.code;
+                        const errorMessage = errorCode;
+                        console.log(errorMessage);
+                    });
+
+                return false;
+            });
+    });
+</script>

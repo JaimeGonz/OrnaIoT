@@ -3,7 +3,7 @@ $(document).ready(function() {
         "language": {
             "lengthMenu": "Mostrar _MENU_ registros",
             "zeroRecords": "No se encontró información",
-            "info": "¨Página _PAGE_ de _PAGES_",
+            "info": "Página _PAGE_ de _PAGES_",
             "infoEmpty": "No hay registros disponibles",
             "infoFiltered": "(Filtrado de _MAX_ registros totales)",
             "search": "Buscar: ",
@@ -42,4 +42,27 @@ $(document).ready(function() {
 
     table2.buttons().container()
     .appendTo( '#datos-baston_wrapper .col-md-6:eq(0)' );
+
+    var table3 = $('#productores').DataTable( {
+        "language": {
+            "lengthMenu": "Mostrar _MENU_ registros",
+            "zeroRecords": "No se encontró información",
+            "info": "Página _PAGE_ de _PAGES_",
+            "infoEmpty": "No hay registros disponibles",
+            "infoFiltered": "(Filtrado de _MAX_ registros totales)",
+            "search": "Buscar: ",
+            "paginate": {
+                "previous": "Ant",
+                "next": "Sig"
+            }
+        },
+        dom: 'Bfrtip',
+        buttons: [
+            'excel', 'pdf', 'print'
+        ]
+    });
+
+    table3.buttons().container()
+    .appendTo( '#datos-baston_wrapper .col-md-6:eq(0)' );
+
 });
